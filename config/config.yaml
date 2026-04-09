@@ -1,0 +1,16 @@
+database:
+  host: localhost
+  port: 5432
+  name: hr_dwh
+  user: admin
+  password: admin123
+
+pipeline:
+  db_file: data/hr_dwh.db
+  n_employees: 10000
+  n_months: 12
+  raw_file: data/employees.csv
+
+dbt:
+  project_dir: dbt_project
+  profiles_dir: dbt_project

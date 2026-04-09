@@ -1,0 +1,12 @@
+hr_payroll:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: admin
+      password: admin123
+      port: 5432
+      dbname: hr_dwh
+      schema: public
+      threads: 4

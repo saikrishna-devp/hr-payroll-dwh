@@ -1,0 +1,429 @@
+[0m21:10:09.569373 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC9F583510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC9E553110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC9E5525D0>]}
+
+
+============================== 21:10:09.585374 | b52d8cc6-dfde-4fc0-9d44-434716c1934a ==============================
+[0m21:10:09.585374 [info ] [MainThread]: Running with dbt=1.11.8
+[0m21:10:09.585374 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt debug --profiles-dir .', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\saira\\Downloads\\hr-payroll-dwh\\dbt_project\\logs'}
+[0m21:10:09.604288 [info ] [MainThread]: dbt version: 1.11.8
+[0m21:10:09.605282 [info ] [MainThread]: python version: 3.11.9
+[0m21:10:09.605282 [info ] [MainThread]: python path: C:\Users\saira\AppData\Local\Programs\Python\Python311\python.exe
+[0m21:10:09.606282 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m21:10:09.641689 [info ] [MainThread]: Using profiles dir at .
+[0m21:10:09.641689 [info ] [MainThread]: Using profiles.yml file at .\profiles.yml
+[0m21:10:09.641689 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\saira\Downloads\hr-payroll-dwh\dbt_project\dbt_project.yml
+[0m21:10:09.641689 [info ] [MainThread]: adapter type: postgres
+[0m21:10:09.649372 [info ] [MainThread]: adapter version: 1.10.0
+[0m21:10:09.718535 [info ] [MainThread]: Configuration:
+[0m21:10:09.719663 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:10:09.720673 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:10:09.720673 [info ] [MainThread]: Required dependencies:
+[0m21:10:09.721669 [debug] [MainThread]: Executing "git --help"
+[0m21:10:09.750148 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:10:09.750148 [debug] [MainThread]: STDERR: "b''"
+[0m21:10:09.750148 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:10:09.750148 [info ] [MainThread]: Connection:
+[0m21:10:09.750148 [info ] [MainThread]:   host: localhost
+[0m21:10:09.750148 [info ] [MainThread]:   port: 5432
+[0m21:10:09.750148 [info ] [MainThread]:   user: admin
+[0m21:10:09.750148 [info ] [MainThread]:   database: hr_dwh
+[0m21:10:09.750148 [info ] [MainThread]:   schema: public
+[0m21:10:09.750148 [info ] [MainThread]:   connect_timeout: 10
+[0m21:10:09.765094 [info ] [MainThread]:   role: None
+[0m21:10:09.765835 [info ] [MainThread]:   search_path: None
+[0m21:10:09.765835 [info ] [MainThread]:   keepalives_idle: 0
+[0m21:10:09.765835 [info ] [MainThread]:   sslmode: None
+[0m21:10:09.766842 [info ] [MainThread]:   sslcert: None
+[0m21:10:09.766842 [info ] [MainThread]:   sslkey: None
+[0m21:10:09.766842 [info ] [MainThread]:   sslrootcert: None
+[0m21:10:09.767842 [info ] [MainThread]:   application_name: dbt
+[0m21:10:09.767842 [info ] [MainThread]:   retries: 1
+[0m21:10:09.768842 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m21:10:09.914295 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m21:10:13.375516 [debug] [MainThread]: Using postgres connection "debug"
+[0m21:10:13.375516 [debug] [MainThread]: On debug: select 1 as id
+[0m21:10:13.376479 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:10:13.429795 [debug] [MainThread]: SQL status: SELECT 1 in 0.053 seconds
+[0m21:10:13.430796 [debug] [MainThread]: On debug: Close
+[0m21:10:13.430796 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:10:13.431796 [info ] [MainThread]: [32mAll checks passed![0m
+[0m21:10:13.432423 [debug] [MainThread]: Command `dbt debug` succeeded at 21:10:13.432423 after 3.92 seconds
+[0m21:10:13.432423 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:10:13.432423 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC9770C110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC9F588CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC9F58A1D0>]}
+[0m21:10:13.432423 [debug] [MainThread]: Flushing usage events
+[0m21:10:13.845088 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:19:48.412002 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029098B95790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002909CD46CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002909CD46ED0>]}
+
+
+============================== 21:19:48.412002 | ca678c07-59fa-431b-b50b-75be95b04474 ==============================
+[0m21:19:48.412002 [info ] [MainThread]: Running with dbt=1.11.8
+[0m21:19:48.412002 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run --profiles-dir . --project-dir .', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m21:19:48.602003 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ca678c07-59fa-431b-b50b-75be95b04474', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002909DDDEFD0>]}
+[0m21:19:48.634025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ca678c07-59fa-431b-b50b-75be95b04474', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029099498310>]}
+[0m21:19:48.634025 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m21:19:48.831746 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m21:19:48.831746 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:19:48.831746 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ca678c07-59fa-431b-b50b-75be95b04474', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002909E05C650>]}
+[0m21:19:51.388806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ca678c07-59fa-431b-b50b-75be95b04474', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002909E50E310>]}
+[0m21:19:51.438522 [debug] [MainThread]: Wrote artifact WritableManifest to .\target\manifest.json
+[0m21:19:51.438522 [debug] [MainThread]: Wrote artifact SemanticManifest to .\target\semantic_manifest.json
+[0m21:19:51.471029 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ca678c07-59fa-431b-b50b-75be95b04474', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002909DF47410>]}
+[0m21:19:51.471587 [info ] [MainThread]: Found 4 models, 3 sources, 465 macros
+[0m21:19:51.471587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ca678c07-59fa-431b-b50b-75be95b04474', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002909B84FA10>]}
+[0m21:19:51.471587 [info ] [MainThread]: 
+[0m21:19:51.471587 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:19:51.471587 [info ] [MainThread]: 
+[0m21:19:51.471587 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:19:51.471587 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hr_dwh'
+[0m21:19:51.521601 [debug] [ThreadPool]: Using postgres connection "list_hr_dwh"
+[0m21:19:51.521601 [debug] [ThreadPool]: On list_hr_dwh: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "hr_payroll", "target_name": "dev", "connection_name": "list_hr_dwh"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m21:19:51.521601 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:19:51.538004 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.018 seconds
+[0m21:19:51.538004 [debug] [ThreadPool]: On list_hr_dwh: Close
+[0m21:19:51.538004 [debug] [ThreadPool]: Acquiring new postgres connection 'list_hr_dwh_public'
+[0m21:19:51.538004 [debug] [ThreadPool]: Using postgres connection "list_hr_dwh_public"
+[0m21:19:51.538004 [debug] [ThreadPool]: On list_hr_dwh_public: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "hr_payroll", "target_name": "dev", "connection_name": "list_hr_dwh_public"} */
+select
+      'hr_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'hr_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'hr_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m21:19:51.538004 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:19:51.557285 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.013 seconds
+[0m21:19:51.557285 [debug] [ThreadPool]: On list_hr_dwh_public: ROLLBACK
+[0m21:19:51.557285 [debug] [ThreadPool]: On list_hr_dwh_public: Close
+[0m21:19:51.557285 [debug] [MainThread]: Using postgres connection "master"
+[0m21:19:51.557285 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "hr_payroll", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m21:19:51.557285 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:19:51.595872 [debug] [MainThread]: SQL status: SELECT 0 in 0.026 seconds
+[0m21:19:51.595872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ca678c07-59fa-431b-b50b-75be95b04474', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002909C4D8A50>]}
+[0m21:19:51.595872 [debug] [MainThread]: On master: ROLLBACK
+[0m21:19:51.595872 [debug] [MainThread]: On master: COMMIT
+[0m21:19:51.595872 [debug] [MainThread]: Using postgres connection "master"
+[0m21:19:51.595872 [debug] [MainThread]: On master: COMMIT
+[0m21:19:51.595872 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m21:19:51.595872 [debug] [MainThread]: On master: Close
+[0m21:19:51.604499 [debug] [Thread-1 (]: Began running node model.hr_payroll.mart_headcount
+[0m21:19:51.604499 [debug] [Thread-2 (]: Began running node model.hr_payroll.mart_payroll
+[0m21:19:51.604499 [debug] [Thread-3 (]: Began running node model.hr_payroll.raw_employees
+[0m21:19:51.604499 [debug] [Thread-4 (]: Began running node model.hr_payroll.stg_employees
+[0m21:19:51.604499 [info ] [Thread-1 (]: 1 of 4 START sql table model public.mart_headcount ............................. [RUN]
+[0m21:19:51.604499 [info ] [Thread-2 (]: 2 of 4 START sql table model public.mart_payroll ............................... [RUN]
+[0m21:19:51.610712 [info ] [Thread-3 (]: 3 of 4 START sql view model public.raw_employees ............................... [RUN]
+[0m21:19:51.611219 [info ] [Thread-4 (]: 4 of 4 START sql view model public.stg_employees ............................... [RUN]
+[0m21:19:51.611797 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.hr_payroll.mart_headcount'
+[0m21:19:51.611797 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.hr_payroll.mart_payroll'
+[0m21:19:51.612379 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.hr_payroll.raw_employees'
+[0m21:19:51.613008 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.hr_payroll.stg_employees'
+[0m21:19:51.613617 [debug] [Thread-1 (]: Began compiling node model.hr_payroll.mart_headcount
+[0m21:19:51.613617 [debug] [Thread-2 (]: Began compiling node model.hr_payroll.mart_payroll
+[0m21:19:51.614272 [debug] [Thread-3 (]: Began compiling node model.hr_payroll.raw_employees
+[0m21:19:51.614852 [debug] [Thread-4 (]: Began compiling node model.hr_payroll.stg_employees
+[0m21:19:51.615447 [debug] [Thread-1 (]: Writing injected SQL for node "model.hr_payroll.mart_headcount"
+[0m21:19:51.621190 [debug] [Thread-2 (]: Writing injected SQL for node "model.hr_payroll.mart_payroll"
+[0m21:19:51.621190 [debug] [Thread-3 (]: Writing injected SQL for node "model.hr_payroll.raw_employees"
+[0m21:19:51.621190 [debug] [Thread-4 (]: Writing injected SQL for node "model.hr_payroll.stg_employees"
+[0m21:19:51.621190 [debug] [Thread-1 (]: Began executing node model.hr_payroll.mart_headcount
+[0m21:19:51.637924 [debug] [Thread-1 (]: Writing runtime sql for node "model.hr_payroll.mart_headcount"
+[0m21:19:51.653633 [debug] [Thread-4 (]: Began executing node model.hr_payroll.stg_employees
+[0m21:19:51.654645 [debug] [Thread-4 (]: Writing runtime sql for node "model.hr_payroll.stg_employees"
+[0m21:19:51.654645 [debug] [Thread-2 (]: Began executing node model.hr_payroll.mart_payroll
+[0m21:19:51.666778 [debug] [Thread-3 (]: Began executing node model.hr_payroll.raw_employees
+[0m21:19:51.666778 [debug] [Thread-2 (]: Writing runtime sql for node "model.hr_payroll.mart_payroll"
+[0m21:19:51.670786 [debug] [Thread-3 (]: Writing runtime sql for node "model.hr_payroll.raw_employees"
+[0m21:19:51.670786 [debug] [Thread-4 (]: Using postgres connection "model.hr_payroll.stg_employees"
+[0m21:19:51.670786 [debug] [Thread-4 (]: On model.hr_payroll.stg_employees: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "hr_payroll", "target_name": "dev", "node_id": "model.hr_payroll.stg_employees"} */
+
+  create view "hr_dwh"."public"."stg_employees__dbt_tmp"
+    
+    
+  as (
+    select
+    employee_id,
+    first_name,
+    last_name,
+    first_name || " " || last_name as full_name,
+    department,
+    job_title,
+    job_level,
+    base_salary,
+    base_salary / 12 as monthly_salary,
+    state,
+    hire_date,
+    termination_date,
+    is_active,
+    performance_rating,
+    gender,
+    age
+from "hr_dwh"."public"."raw_employees"
+where employee_id is not null
+  and base_salary > 0
+  and age between 18 and 70
+  );
+[0m21:19:51.670786 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m21:19:51.670786 [debug] [Thread-3 (]: Using postgres connection "model.hr_payroll.raw_employees"
+[0m21:19:51.670786 [debug] [Thread-1 (]: Using postgres connection "model.hr_payroll.mart_headcount"
+[0m21:19:51.670786 [debug] [Thread-3 (]: On model.hr_payroll.raw_employees: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "hr_payroll", "target_name": "dev", "node_id": "model.hr_payroll.raw_employees"} */
+
+  create view "hr_dwh"."public"."raw_employees__dbt_tmp"
+    
+    
+  as (
+    select * from "hr_dwh"."public"."raw_employees"
+  );
+[0m21:19:51.670786 [debug] [Thread-2 (]: Using postgres connection "model.hr_payroll.mart_payroll"
+[0m21:19:51.670786 [debug] [Thread-1 (]: On model.hr_payroll.mart_headcount: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "hr_payroll", "target_name": "dev", "node_id": "model.hr_payroll.mart_headcount"} */
+
+  
+    
+
+  create  table "hr_dwh"."public"."mart_headcount__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select
+    department,
+    job_level,
+    state,
+    gender,
+    performance_rating,
+    count(*) as total_employees,
+    sum(is_active) as active_employees,
+    count(*) - sum(is_active) as terminated_employees,
+    round(avg(base_salary), 2) as avg_salary,
+    round(avg(age), 1) as avg_age
+from "hr_dwh"."public"."raw_employees"
+group by department, job_level, state, gender, performance_rating
+  );
+  
+[0m21:19:51.670786 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m21:19:51.670786 [debug] [Thread-2 (]: On model.hr_payroll.mart_payroll: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "hr_payroll", "target_name": "dev", "node_id": "model.hr_payroll.mart_payroll"} */
+
+  
+    
+
+  create  table "hr_dwh"."public"."mart_payroll__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select
+    department,
+    job_level,
+    year,
+    month,
+    count(distinct employee_id) as employees_paid,
+    round(sum(gross_salary), 2) as total_gross,
+    round(sum(federal_tax), 2) as total_federal_tax,
+    round(sum(state_tax), 2) as total_state_tax,
+    round(sum(social_security), 2) as total_social_security,
+    round(sum(medicare), 2) as total_medicare,
+    round(sum(total_deductions), 2) as total_deductions,
+    round(sum(net_pay), 2) as total_net_pay,
+    round(avg(gross_salary), 2) as avg_gross_salary
+from "hr_dwh"."public"."fact_payroll"
+group by department, job_level, year, month
+  );
+  
+[0m21:19:51.670786 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:19:51.670786 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m21:19:51.688278 [debug] [Thread-4 (]: Postgres adapter: Postgres error: column " " does not exist
+LINE 11:     first_name || " " || last_name as full_name,
+                           ^
+
+[0m21:19:51.688278 [debug] [Thread-4 (]: On model.hr_payroll.stg_employees: ROLLBACK
+[0m21:19:51.688278 [debug] [Thread-4 (]: On model.hr_payroll.stg_employees: Close
+[0m21:19:51.694702 [debug] [Thread-1 (]: Postgres adapter: Postgres error: function round(double precision, integer) does not exist
+LINE 21:     round(avg(base_salary), 2) as avg_salary,
+             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+[0m21:19:51.694702 [debug] [Thread-1 (]: On model.hr_payroll.mart_headcount: ROLLBACK
+[0m21:19:51.694702 [debug] [Thread-2 (]: Postgres adapter: Postgres error: function round(double precision, integer) does not exist
+LINE 18:     round(sum(gross_salary), 2) as total_gross,
+             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+[0m21:19:51.694702 [debug] [Thread-2 (]: On model.hr_payroll.mart_payroll: ROLLBACK
+[0m21:19:51.694702 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.019 seconds
+[0m21:19:51.694702 [debug] [Thread-1 (]: On model.hr_payroll.mart_headcount: Close
+[0m21:19:51.699017 [debug] [Thread-3 (]: Using postgres connection "model.hr_payroll.raw_employees"
+[0m21:19:51.703554 [debug] [Thread-2 (]: On model.hr_payroll.mart_payroll: Close
+[0m21:19:51.705211 [debug] [Thread-3 (]: On model.hr_payroll.raw_employees: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "hr_payroll", "target_name": "dev", "node_id": "model.hr_payroll.raw_employees"} */
+alter table "hr_dwh"."public"."raw_employees" rename to "raw_employees__dbt_backup"
+[0m21:19:51.705211 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:19:51.705211 [debug] [Thread-3 (]: Using postgres connection "model.hr_payroll.raw_employees"
+[0m21:19:51.710586 [debug] [Thread-3 (]: On model.hr_payroll.raw_employees: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "hr_payroll", "target_name": "dev", "node_id": "model.hr_payroll.raw_employees"} */
+alter table "hr_dwh"."public"."raw_employees__dbt_tmp" rename to "raw_employees"
+[0m21:19:51.710586 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:19:51.720580 [debug] [Thread-3 (]: On model.hr_payroll.raw_employees: COMMIT
+[0m21:19:51.720580 [debug] [Thread-3 (]: Using postgres connection "model.hr_payroll.raw_employees"
+[0m21:19:51.720580 [debug] [Thread-3 (]: On model.hr_payroll.raw_employees: COMMIT
+[0m21:19:51.720580 [debug] [Thread-1 (]: Database Error in model mart_headcount (models\marts\mart_headcount.sql)
+  function round(double precision, integer) does not exist
+  LINE 21:     round(avg(base_salary), 2) as avg_salary,
+               ^
+  HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+  compiled code at target\run\hr_payroll\models\marts\mart_headcount.sql
+[0m21:19:51.720580 [debug] [Thread-2 (]: Database Error in model mart_payroll (models\marts\mart_payroll.sql)
+  function round(double precision, integer) does not exist
+  LINE 18:     round(sum(gross_salary), 2) as total_gross,
+               ^
+  HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+  compiled code at target\run\hr_payroll\models\marts\mart_payroll.sql
+[0m21:19:51.720580 [debug] [Thread-3 (]: SQL status: COMMIT in 0.003 seconds
+[0m21:19:51.720580 [debug] [Thread-4 (]: Database Error in model stg_employees (models\staging\stg_employees.sql)
+  column " " does not exist
+  LINE 11:     first_name || " " || last_name as full_name,
+                             ^
+  compiled code at target\run\hr_payroll\models\staging\stg_employees.sql
+[0m21:19:51.737241 [debug] [Thread-3 (]: Applying DROP to: "hr_dwh"."public"."raw_employees__dbt_backup"
+[0m21:19:51.737241 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ca678c07-59fa-431b-b50b-75be95b04474', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002909EA39B50>]}
+[0m21:19:51.737241 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ca678c07-59fa-431b-b50b-75be95b04474', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002909EF01450>]}
+[0m21:19:51.737241 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ca678c07-59fa-431b-b50b-75be95b04474', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002909EF1D990>]}
+[0m21:19:51.737241 [debug] [Thread-3 (]: Using postgres connection "model.hr_payroll.raw_employees"
+[0m21:19:51.737241 [error] [Thread-1 (]: 1 of 4 ERROR creating sql table model public.mart_headcount .................... [[31mERROR[0m in 0.11s]
+[0m21:19:51.737241 [error] [Thread-2 (]: 2 of 4 ERROR creating sql table model public.mart_payroll ...................... [[31mERROR[0m in 0.11s]
+[0m21:19:51.737241 [error] [Thread-4 (]: 4 of 4 ERROR creating sql view model public.stg_employees ...................... [[31mERROR[0m in 0.12s]
+[0m21:19:51.737241 [debug] [Thread-3 (]: On model.hr_payroll.raw_employees: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "hr_payroll", "target_name": "dev", "node_id": "model.hr_payroll.raw_employees"} */
+drop table if exists "hr_dwh"."public"."raw_employees__dbt_backup" cascade
+[0m21:19:51.737241 [debug] [Thread-1 (]: Finished running node model.hr_payroll.mart_headcount
+[0m21:19:51.737241 [debug] [Thread-2 (]: Finished running node model.hr_payroll.mart_payroll
+[0m21:19:51.737241 [debug] [Thread-4 (]: Finished running node model.hr_payroll.stg_employees
+[0m21:19:51.737241 [debug] [Thread-7 (]: Marking all children of 'model.hr_payroll.mart_headcount' to be skipped because of status 'error'.  Reason: Database Error in model mart_headcount (models\marts\mart_headcount.sql)
+  function round(double precision, integer) does not exist
+  LINE 21:     round(avg(base_salary), 2) as avg_salary,
+               ^
+  HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+  compiled code at target\run\hr_payroll\models\marts\mart_headcount.sql.
+[0m21:19:51.737241 [debug] [Thread-7 (]: Marking all children of 'model.hr_payroll.mart_payroll' to be skipped because of status 'error'.  Reason: Database Error in model mart_payroll (models\marts\mart_payroll.sql)
+  function round(double precision, integer) does not exist
+  LINE 18:     round(sum(gross_salary), 2) as total_gross,
+               ^
+  HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+  compiled code at target\run\hr_payroll\models\marts\mart_payroll.sql.
+[0m21:19:51.737241 [debug] [Thread-7 (]: Marking all children of 'model.hr_payroll.stg_employees' to be skipped because of status 'error'.  Reason: Database Error in model stg_employees (models\staging\stg_employees.sql)
+  column " " does not exist
+  LINE 11:     first_name || " " || last_name as full_name,
+                             ^
+  compiled code at target\run\hr_payroll\models\staging\stg_employees.sql.
+[0m21:19:51.737241 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.004 seconds
+[0m21:19:51.753506 [debug] [Thread-3 (]: On model.hr_payroll.raw_employees: Close
+[0m21:19:51.754161 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ca678c07-59fa-431b-b50b-75be95b04474', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002909EA7C510>]}
+[0m21:19:51.754161 [info ] [Thread-3 (]: 3 of 4 OK created sql view model public.raw_employees .......................... [[32mCREATE VIEW[0m in 0.14s]
+[0m21:19:51.754161 [debug] [Thread-3 (]: Finished running node model.hr_payroll.raw_employees
+[0m21:19:51.754161 [debug] [MainThread]: On master: COMMIT
+[0m21:19:51.754161 [debug] [MainThread]: Using postgres connection "master"
+[0m21:19:51.754161 [debug] [MainThread]: On master: COMMIT
+[0m21:19:51.754161 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:19:51.771055 [debug] [MainThread]: SQL status: COMMIT in 0.018 seconds
+[0m21:19:51.771055 [debug] [MainThread]: On master: Close
+[0m21:19:51.771055 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:19:51.771055 [debug] [MainThread]: Connection 'list_hr_dwh' was properly closed.
+[0m21:19:51.771055 [debug] [MainThread]: Connection 'list_hr_dwh_public' was properly closed.
+[0m21:19:51.771055 [debug] [MainThread]: Connection 'model.hr_payroll.mart_headcount' was properly closed.
+[0m21:19:51.778509 [debug] [MainThread]: Connection 'model.hr_payroll.mart_payroll' was properly closed.
+[0m21:19:51.778509 [debug] [MainThread]: Connection 'model.hr_payroll.raw_employees' was properly closed.
+[0m21:19:51.778509 [debug] [MainThread]: Connection 'model.hr_payroll.stg_employees' was properly closed.
+[0m21:19:51.778509 [info ] [MainThread]: 
+[0m21:19:51.778509 [info ] [MainThread]: Finished running 2 table models, 2 view models in 0 hours 0 minutes and 0.31 seconds (0.31s).
+[0m21:19:51.778509 [debug] [MainThread]: Command end result
+[0m21:19:51.841601 [debug] [MainThread]: Wrote artifact WritableManifest to .\target\manifest.json
+[0m21:19:51.843613 [debug] [MainThread]: Wrote artifact SemanticManifest to .\target\semantic_manifest.json
+[0m21:19:51.845917 [debug] [MainThread]: Wrote artifact RunExecutionResult to .\target\run_results.json
+[0m21:19:51.845917 [info ] [MainThread]: 
+[0m21:19:51.845917 [info ] [MainThread]: [31mCompleted with 3 errors, 0 partial successes, and 0 warnings:[0m
+[0m21:19:51.845917 [info ] [MainThread]: 
+[0m21:19:51.845917 [error] [MainThread]: [31mFailure in model mart_headcount (models\marts\mart_headcount.sql)[0m
+[0m21:19:51.845917 [error] [MainThread]:   Database Error in model mart_headcount (models\marts\mart_headcount.sql)
+  function round(double precision, integer) does not exist
+  LINE 21:     round(avg(base_salary), 2) as avg_salary,
+               ^
+  HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+  compiled code at target\run\hr_payroll\models\marts\mart_headcount.sql
+[0m21:19:51.845917 [info ] [MainThread]: 
+[0m21:19:51.845917 [info ] [MainThread]:   compiled code at target\compiled\hr_payroll\models\marts\mart_headcount.sql
+[0m21:19:51.853671 [info ] [MainThread]: 
+[0m21:19:51.853671 [error] [MainThread]: [31mFailure in model mart_payroll (models\marts\mart_payroll.sql)[0m
+[0m21:19:51.853671 [error] [MainThread]:   Database Error in model mart_payroll (models\marts\mart_payroll.sql)
+  function round(double precision, integer) does not exist
+  LINE 18:     round(sum(gross_salary), 2) as total_gross,
+               ^
+  HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+  compiled code at target\run\hr_payroll\models\marts\mart_payroll.sql
+[0m21:19:51.854675 [info ] [MainThread]: 
+[0m21:19:51.854675 [info ] [MainThread]:   compiled code at target\compiled\hr_payroll\models\marts\mart_payroll.sql
+[0m21:19:51.854675 [info ] [MainThread]: 
+[0m21:19:51.855674 [error] [MainThread]: [31mFailure in model stg_employees (models\staging\stg_employees.sql)[0m
+[0m21:19:51.855674 [error] [MainThread]:   Database Error in model stg_employees (models\staging\stg_employees.sql)
+  column " " does not exist
+  LINE 11:     first_name || " " || last_name as full_name,
+                             ^
+  compiled code at target\run\hr_payroll\models\staging\stg_employees.sql
+[0m21:19:51.855674 [info ] [MainThread]: 
+[0m21:19:51.856674 [info ] [MainThread]:   compiled code at target\compiled\hr_payroll\models\staging\stg_employees.sql
+[0m21:19:51.856674 [info ] [MainThread]: 
+[0m21:19:51.856674 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=3 SKIP=0 NO-OP=0 TOTAL=4
+[0m21:19:51.857674 [debug] [MainThread]: Command `dbt run` failed at 21:19:51.857674 after 3.52 seconds
+[0m21:19:51.857674 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002909F02DA90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002909B96EE10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002909F02A2D0>]}
+[0m21:19:51.858675 [debug] [MainThread]: Flushing usage events
+[0m21:19:52.270138 [debug] [MainThread]: An error was encountered while trying to flush usage events

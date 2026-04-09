@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: hr
+    database: hr_dwh
+    schema: public
+    tables:
+      - name: raw_employees
+      - name: fact_payroll
+      - name: fact_attrition
